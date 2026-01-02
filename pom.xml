@@ -13,6 +13,7 @@
     <groupId>be.wouterbiront</groupId>
     <artifactId>budget-management-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <packaging>pom</packaging>
 
     <name>budget-management-backend</name>
@@ -27,8 +28,6 @@
 
     <properties>
         <java.version>21</java.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

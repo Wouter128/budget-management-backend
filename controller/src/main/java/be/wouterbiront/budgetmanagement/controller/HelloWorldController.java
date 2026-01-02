@@ -1,4 +1,4 @@
-package be.wouterbiront.budgetmanagementbackend.controller;
+package be.wouterbiront.budgetmanagement.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

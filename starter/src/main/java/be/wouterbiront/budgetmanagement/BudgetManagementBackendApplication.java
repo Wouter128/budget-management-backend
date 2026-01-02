@@ -1,4 +1,4 @@
-package be.wouterbiront.budgetmanagementbackend;
+package be.wouterbiront.budgetmanagement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
