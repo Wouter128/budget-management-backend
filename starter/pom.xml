@@ -24,6 +24,10 @@
             <groupId>be.wouterbiront</groupId>
             <artifactId>persistence</artifactId>
         </dependency>
+        <dependency>
+            <groupId>be.wouterbiront</groupId>
+            <artifactId>application</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
