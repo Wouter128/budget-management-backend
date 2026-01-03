@@ -16,7 +16,6 @@ public class TransactionEntity {
     @Id
     @Column(name = "id")
     private String id;
-
     @Embedded
     @Column(name = "amount")
     private MoneyEntity amount;

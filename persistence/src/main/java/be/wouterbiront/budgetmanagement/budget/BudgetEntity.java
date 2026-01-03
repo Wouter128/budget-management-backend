@@ -1,11 +1,11 @@
 package be.wouterbiront.budgetmanagement.budget;
 
+import be.wouterbiront.budgetmanagement.money.MoneyEntity;
 import be.wouterbiront.budgetmanagement.transaction.TransactionEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.Month;
 import java.util.List;
 
@@ -19,16 +19,17 @@ public class BudgetEntity {
     private String id;
     @Column(name = "month")
     private Month month;
+    @Embedded
     @Column(name = "money")
-    private BigDecimal Money;
+    private MoneyEntity money;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "budget_id", referencedColumnName = "id")
     private List<TransactionEntity> transactions;
 
-    public BudgetEntity(String id, Month month, BigDecimal Money, List<TransactionEntity> transactions) {
+    public BudgetEntity(String id, Month month, MoneyEntity money, List<TransactionEntity> transactions) {
         this.id = id;
         this.month = month;
-        this.Money = Money;
+        this.money = money;
         this.transactions = transactions;
     }
 }
