@@ -21,8 +21,7 @@ public class UserRepository implements UserRepositoryPort {
 
     @Override
     public void save(User user) {
-        // TODO: map User to UserEntity
-        UserEntity userEntity = new UserEntity();
+        UserEntity userEntity = new UserEntity(user.getId(), user.getFirstName(), user.getLastName());
         jpaUserRepository.save(userEntity);
     }
 
