@@ -21,7 +21,7 @@ public class TransactionEntity {
     @Column(name = "amount")
     private MoneyEntity amount;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category")
+    @JoinColumn(name = "category_id")
     private CategoryEntity category;
     @Column(name = "date")
     private Date date;

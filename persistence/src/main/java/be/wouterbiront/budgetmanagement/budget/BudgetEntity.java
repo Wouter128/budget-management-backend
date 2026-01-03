@@ -22,6 +22,7 @@ public class BudgetEntity {
     @Column(name = "money")
     private BigDecimal Money;
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "budget_id", referencedColumnName = "id")
     private List<TransactionEntity> transactions;
 
     public BudgetEntity(String id, Month month, BigDecimal Money, List<TransactionEntity> transactions) {
