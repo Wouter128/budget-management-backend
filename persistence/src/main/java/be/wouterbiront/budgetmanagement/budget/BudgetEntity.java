@@ -22,8 +22,7 @@ public class BudgetEntity {
     @Embedded
     @Column(name = "money")
     private MoneyEntity money;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "budget_id", referencedColumnName = "id")
+    @OneToMany(mappedBy = "budget", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<TransactionEntity> transactions;
 
     public BudgetEntity(String id, Month month, MoneyEntity money, List<TransactionEntity> transactions) {

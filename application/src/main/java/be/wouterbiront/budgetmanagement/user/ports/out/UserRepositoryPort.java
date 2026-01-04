@@ -7,5 +7,5 @@ import java.util.UUID;
 
 public interface UserRepositoryPort {
     void save(User user);
-    Optional<User> findById(UUID id);
+    User findByFirstNameAndLastName(String firstName, String lastName);
 }

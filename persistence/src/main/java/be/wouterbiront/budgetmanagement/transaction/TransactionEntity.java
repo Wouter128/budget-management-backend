@@ -1,5 +1,6 @@
 package be.wouterbiront.budgetmanagement.transaction;
 
+import be.wouterbiront.budgetmanagement.budget.BudgetEntity;
 import be.wouterbiront.budgetmanagement.category.CategoryEntity;
 import be.wouterbiront.budgetmanagement.money.MoneyEntity;
 import jakarta.persistence.*;
@@ -26,12 +27,16 @@ public class TransactionEntity {
     private Date date;
     @Column(name = "description")
     private String description;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "budget_id", nullable = false)
+    private BudgetEntity budget;
 
-    public  TransactionEntity(String id, MoneyEntity amount, CategoryEntity category, Date date, String description) {
+    public  TransactionEntity(String id, MoneyEntity amount, CategoryEntity category, Date date, String description,  BudgetEntity budget) {
         this.id = id;
         this.amount = amount;
         this.category = category;
         this.date = date;
         this.description = description;
+        this.budget = budget;
     }
 }
